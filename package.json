@@ -1,6 +1,6 @@
 {
   "name": "talxwev-notify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight framework-agnostic toast notifications for web apps",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -28,7 +28,7 @@
   "author": "M Meenatchisundharam <sundharmadhim@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/talxwev-notify.git"
+    "url": "https://github.com/meenatchisundharam/talxwev-notify"
   },
   "license": "MIT",
   "devDependencies": {
