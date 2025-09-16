@@ -1,0 +1,68 @@
+/* src/styles.css - default styles (can be overridden by consumers) */
+:root {
+  --talx-bg-info: #3182ce;
+  --talx-bg-success: #16a34a;
+  --talx-bg-error: #dc2626;
+  --talx-bg-warning: #d97706;
+  --talx-text: #ffffff;
+  --talx-radius: 8px;
+  --talx-gap: 8px;
+}
+
+.talx-container {
+  position: fixed;
+  z-index: 999999;
+  pointer-events: none; /* container doesn't capture clicks */
+  display: flex;
+  flex-direction: column;
+  gap: var(--talx-gap);
+  max-width: calc(100% - 2rem);
+}
+
+.talx-container--top-right { top: 1rem; right: 1rem; align-items: flex-end; }
+.talx-container--top-left  { top: 1rem; left: 1rem; align-items: flex-start; }
+.talx-container--bottom-right { bottom: 1rem; right: 1rem; align-items: flex-end; }
+.talx-container--bottom-left { bottom: 1rem; left: 1rem; align-items: flex-start; }
+.talx-container--top-center { top: 1rem; left: 50%; transform: translateX(-50%); align-items: center; }
+.talx-container--bottom-center { bottom: 1rem; left: 50%; transform: translateX(-50%); align-items: center; }
+
+.talx-toast {
+  pointer-events: auto;
+  min-width: 200px;
+  max-width: 420px;
+  background: var(--talx-bg-info);
+  color: var(--talx-text);
+  padding: 12px 14px;
+  border-radius: var(--talx-radius);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transform-origin: right top;
+  transition: transform .18s cubic-bezier(.2,.9,.2,1), opacity .18s ease;
+  opacity: 1;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.talx-toast--hide { opacity: 0; transform: translateY(-10px) scale(.99); }
+
+.talx-toast--success { background: var(--talx-bg-success); }
+.talx-toast--error { background: var(--talx-bg-error); }
+.talx-toast--warning { background: var(--talx-bg-warning); }
+
+.talx-content { flex: 1 1 auto; }
+.talx-title { font-weight: 700; margin-bottom: 4px; font-size: 14px; }
+.talx-message { font-size: 13px; line-height: 1.2; }
+
+.talx-close {
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+.talx-close:focus { outline: 2px solid rgba(255,255,255,0.2); }

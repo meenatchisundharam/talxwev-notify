@@ -1,0 +1,38 @@
+{
+  "name": "talxwev-notify",
+  "version": "1.0.0",
+  "description": "Lightweight framework-agnostic toast notifications for web apps",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "browser": "dist/index.global.js",
+  "unpkg": "dist/index.global.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup && node -e \"require('fs').copyFileSync('./src/styles.css','./dist/styles.css')\"",
+    "build:watch": "tsup --watch",
+    "pack": "npm pack"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "browser": "./dist/index.global.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "sideEffects": [
+    "./dist/styles.css"
+  ],
+  "keywords": ["toast", "notification", "talxwev", "notify"],
+  "author": "M Meenatchisundharam <sundharmadhim@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/talxwev-notify.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.0.0"
+  }
+}
