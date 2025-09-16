@@ -184,9 +184,3 @@ This adds a **ready-to-use demo section** so anyone can copy the HTML and instan
 If you want, I can also **add a live preview GIF/demo badge** section to make your README even more engaging. Do you want me to do that?
 
 
-
-
-
-
-
-Ask ChatGPT
